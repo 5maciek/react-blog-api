@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AddComment from './AddComment';
 
 export default function Comments(props) {
@@ -28,9 +28,9 @@ export default function Comments(props) {
             {comments
               ? comments.map((comment) => (
                   <li key={comment.id}>
-                    <h4>{comment.name}</h4>
-                    <h4>{comment.email}</h4>
-                    <p> {comment.body}</p>
+                    <h4 className="comment__name">{comment.name}</h4>
+                    <h5 className="comment__email">{comment.email}</h5>
+                    <p className="comment__body"> {comment.body}</p>
                   </li>
                 ))
               : null}

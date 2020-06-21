@@ -54,13 +54,17 @@ export default function Posts(props) {
           ? posts.map((post, index) =>
               index <= indexPost ? (
                 <li key={post.id} className="post">
-                  <h4>{post.title}</h4>
-                  <p>{post.body}</p>
+                  <h4 className="post__title">{post.title}</h4>
+                  <p className="post__body">{post.body}</p>
                   <Comments
                     postId={post.id}
                     showComments={showComments[index]}
                   />
-                  <button onClick={() => handleShowComments(index)}>
+                  <div className="line"></div>
+                  <button
+                    className="comments"
+                    onClick={() => handleShowComments(index)}
+                  >
                     {showComments[index] === true
                       ? 'Hide comments'
                       : 'Show comments'}

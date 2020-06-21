@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function AddComment(props) {
@@ -47,10 +47,10 @@ export default function AddComment(props) {
   };
 
   return (
-    <section className="posts">
+    <section className="addComment">
       <form>
         <label>
-          Name:{' '}
+          Name:
           <input
             type="text"
             name="name"
@@ -59,9 +59,8 @@ export default function AddComment(props) {
             onChange={handleChangeInput}
           />
         </label>
-        <br />
         <label>
-          Email:{' '}
+          Email:
           <input
             type="text"
             name="email"
@@ -69,11 +68,11 @@ export default function AddComment(props) {
             onChange={handleChangeInput}
           />
         </label>
-        <br />
         <textarea
           name="bodyComment"
           value={commentBody}
           onChange={handleChangeInput}
+          placeholder="Write a comment..."
         >
           Write comment...
         </textarea>
