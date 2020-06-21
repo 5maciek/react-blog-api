@@ -61,13 +61,13 @@ export default class Users extends Component {
         this.state.currentUser[0].id,
         this.state.inputNameValue
       );
-    } else if (this.state.currentUser) {
+    } else if (this.state.currentUser.length > 0) {
       this.setState({
         isOpenEditUserForm: true,
         inputNameValue: this.state.currentUser[0].name,
       });
     } else {
-      alert('select user to edit name');
+      alert("We haven't found this user...");
     }
   };
 
